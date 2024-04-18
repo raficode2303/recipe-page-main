@@ -1,0 +1,102 @@
+/* import local fonts */
+@font-face {
+  font-family: 'Young Serif';
+  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+@font-face {
+  font-family: Outfit;
+  src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+/* === reset custom css === */
+:root {
+  --nutmeg-color: hsl(14, 45%, 36%);
+  --dark-raspberry-color: hsl(332, 51%, 32%);
+  --white-color: hsl(0, 0%, 100%);
+  --rose-white-color: hsl(330, 100%, 98%);
+  --eggshell-color: hsl(30, 54%, 90%);
+  --light-grey-color: hsl(30, 18%, 87%);
+  --wenge-brown-color: hsl(30, 10%, 34%);
+  --dark-charcoal-color: hsl(24, 5%, 18%);
+  --border-radius: 1rem;
+  --primary-color-1: var(--nutmeg-color);
+  --primary-color-2: var(--dark-raspberry-color);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* tags */
+body {
+  font-family: Outfit;
+  line-height: 1.5;
+  background-color: var(--eggshell-color, bisque);
+  color: var(--wenge-brown-color);
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Young Serif';
+}
+h2 {
+  color: var(--primary-color-1);
+}
+li {
+  list-style-position: inside;
+}
+a {
+  text-decoration: none;
+}
+/* common classes */
+
+/* classes */
+.app {
+  background-color: var(--white-color, white);
+  /* max-width: 50%; */
+  padding: 2rem;
+  margin: auto;
+  border-radius: var(--border-radius, 1rem);
+}
+
+.image-recipe {
+  border-radius: var(--border-radius);
+  background-color: antiquewhite;
+  background-image: url(./assets/images/image-omelette-low-100.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.recipe-name-heading {
+  color: var(--dark-charcoal-color, black);
+}
+
+ul.preparation-time {
+  background-color: var(--rose-white-color);
+  color: var(--dark-raspberry-color, red);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+}
+li {
+  color: inherit;
+}
+ul.preparation-time > li > span {
+  color: var(--wenge-brown-color, brown);
+}
+ul.preparation-time * {
+  padding-bottom: 0.5rem; /* TODO: try with gap and DELETE LATER!*/
+}
+ul.preparation-time-heading,
+.preparation-time li span:first-child {
+  font-weight: 700;
+}
+.preparation-time li {
+  /* margin-inline-start: 0.5rem; */
+  padding-inline-start: 0.5rem;
+}

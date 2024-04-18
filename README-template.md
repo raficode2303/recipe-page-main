@@ -54,7 +54,13 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-###### Do your research on various HTML elements and ensure you use the most appropriate element based on the content???!
+###### ⛔⚠️ Do your research on various HTML elements and ensure you use the most appropriate element based on the content???!💡 🚨
+
+## what tag to use for <ul> heading?
+
+## is <il> list-style size can modify?
+
+## problem with how to apply a different colors in <li> tag, one color for the list-style-type and second color for the text.
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
