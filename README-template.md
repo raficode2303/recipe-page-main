@@ -34,89 +34,67 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [github](https://github.com/raficode2303/recipe-page-main.git)
+- Live Site URL: [Netlify](https://recipe-page-main-2024.netlify.app/)
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
+- Semantic HTML5 markup such: `ul, ol, li, ::marker, hr, h1-h6, img, table, caption, tr, td `
 - CSS custom properties
-- Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-###### ⛔⚠️ Do your research on various HTML elements and ensure you use the most appropriate element based on the content???!💡 🚨
+Do research on various HTML elements and ensure i use the most appropriate element based on the content???!
 
-## TODO: us `::marker` css selector. - DONE!
+to use `::marker` css selector. - DONE!
 
-## what tag to use for <ul> heading?
+that `<li>` list-style size can modify by using `::marker{font-size: ...;}`
 
-## is <il> list-style size can modify? - yes with `::marker{font-size: ...}`
+how to apply a different colors in <li> tag, one color for the list-style-type and second color for the text by using `::marker {color: ...;}`
 
-## problem with how to apply a different colors in <li> tag, one color for the list-style-type and second color for the text - DONE with `::marker`
+too-much-css make text rows of <li> tag to start in the different place (vertically) - i learned to NOT change the default behavior of elements unless it necessary, because it cause other issues to solve.
 
-## how to make text rows of <li> tag to start in the same place (vertically) ??.❓ - is default! problem is because of too-much-css
+how vertically centering the `::marker` pseudo-element using `::before` because ::marker pseudo-element in CSS does not support vertical alignment or many other properties related to positioning and dimensions. This is due to the fact that ::marker is not a standard box in CSS.
 
-# how vertically centering the <ul> ::marker pseudo-element - ANSWER: ::marker pseudo-element in CSS does not support vertical alignment or many other properties related to positioning and dimensions. This is due to the fact that ::marker is not a standard box in CSS.
-
-## ! details of specific design take time !
+I noticed that details of specific design take me a long time to achieve the desired result - nee to improve it!
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<table class="nutrition-table">
+  <caption>
+    -- table heading --
+  </caption>
+  <tr>
+    <td>Calories</td>
+    <td>277kcal</td>
+  </tr>
+</table>
 ```
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+@media (width > 700px) {
+  .app {
+    max-width: clamp(300px, 90%, 1312px);
+  }
 }
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+focusing on in future projects: be more efficient and finish the project more quickly. to be completely comfortable with CSS Selectors also to solve the challenge using GRID/FLEX.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- [CSS Selector Reference](https://www.w3schools.com/cssref/css_selectors.php) - This helped me for CSS issues. I really liked this site and always using it.
+- [stackoverflow](https://stackoverflow.com/) - help with problems others have handle.
+- [copilot](https://copilot.microsoft.com/) - AI chat to help me with CSS.

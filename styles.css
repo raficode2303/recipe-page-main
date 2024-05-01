@@ -190,6 +190,11 @@ td {
   margin-block: 0.5rem;
 }
 
+.nutrition-table caption {
+  text-align: left;
+  margin-block: 1rem;
+}
+
 .nutrition-table tr:last-child td {
   border-bottom: none;
 }
