@@ -56,11 +56,19 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ###### ⛔⚠️ Do your research on various HTML elements and ensure you use the most appropriate element based on the content???!💡 🚨
 
+## TODO: us `::marker` css selector. - DONE!
+
 ## what tag to use for <ul> heading?
 
-## is <il> list-style size can modify?
+## is <il> list-style size can modify? - yes with `::marker{font-size: ...}`
 
-## problem with how to apply a different colors in <li> tag, one color for the list-style-type and second color for the text.
+## problem with how to apply a different colors in <li> tag, one color for the list-style-type and second color for the text - DONE with `::marker`
+
+## how to make text rows of <li> tag to start in the same place (vertically) ??.❓ - is default! problem is because of too-much-css
+
+# how vertically centering the <ul> ::marker pseudo-element - ANSWER: ::marker pseudo-element in CSS does not support vertical alignment or many other properties related to positioning and dimensions. This is due to the fact that ::marker is not a standard box in CSS.
+
+## ! details of specific design take time !
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 

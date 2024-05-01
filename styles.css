@@ -1,12 +1,13 @@
 /* import local fonts */
 @font-face {
-  font-family: 'Young Serif';
-  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
-}
-@font-face {
   font-family: Outfit;
   src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: 'Young Serif';
+  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
 /* === reset custom css === */
 :root {
   --nutmeg-color: hsl(14, 45%, 36%);
@@ -20,6 +21,10 @@
   --border-radius: 1rem;
   --primary-color-1: var(--nutmeg-color);
   --primary-color-2: var(--dark-raspberry-color);
+  --primary-color-3: var(--wenge-brown-color);
+  --primary-bckg-color: var(--eggshell-color, grey);
+  --primary-font-1: Outfit;
+  --primary-font-2: 'Young Serif';
 }
 *,
 *::before,
@@ -30,14 +35,14 @@
 }
 /* tags */
 body {
-  font-family: Outfit;
+  font-family: var(--primary-font-1, Serif);
   line-height: 1.5;
-  background-color: var(--eggshell-color, bisque);
-  color: var(--wenge-brown-color);
+  background-color: var(--primary-bckg-color, bisque);
+  color: var(--primary-color-3);
 }
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 h1,
@@ -45,58 +50,146 @@ h2,
 h3 {
   font-family: 'Young Serif';
 }
-h2 {
+h2,
+.ingredients-items ::marker,
+.instructions-items ::marker,
+.nutrition-table td:last-child {
   color: var(--primary-color-1);
+  font-weight: 700;
+}
+ul,
+ol {
+  padding-left: 1.5rem;
 }
 li {
-  list-style-position: inside;
+  padding: 0.5rem 1rem;
 }
 a {
   text-decoration: none;
 }
-/* common classes */
 
-/* classes */
-.app {
-  background-color: var(--white-color, white);
-  /* max-width: 50%; */
-  padding: 2rem;
-  margin: auto;
-  border-radius: var(--border-radius, 1rem);
+hr {
+  margin-block: 1rem;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  padding: 8px 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* media */
+@media (width < 700px) {
+  .main-content {
+    padding: 0 2rem;
+  }
+  .ingredients-items li {
+    list-style-type: none;
+    position: relative;
+    padding-left: 30px; /* Adjust as needed */
+  }
+  .ingredients-items li::before {
+    content: '•';
+    color: var(--primary-color-2);
+    font-size: 2rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+@media (width > 700px) {
+  .app {
+    max-width: clamp(300px, 90%, 1312px);
+    padding: 2rem;
+    margin: 2rem auto;
+    border-radius: var(--border-radius, 1rem);
+  }
+  img {
+    border-radius: var(--border-radius, 1rem);
+  }
+}
+.app {
+  background-color: var(--white-color, white);
+}
+
+/* === common classes === */
+
+/* === classes === */
+
+/* image app */
 .image-recipe {
-  border-radius: var(--border-radius);
   background-color: antiquewhite;
   background-image: url(./assets/images/image-omelette-low-100.jpg);
   background-repeat: no-repeat;
   background-size: contain;
 }
-
+/* header */
 .recipe-name-heading {
   color: var(--dark-charcoal-color, black);
+  margin-block: 1rem;
 }
 
-ul.preparation-time {
+.recipe-name-info {
+  margin-block: 1rem;
+}
+
+/* Preparation time */
+.preparation-time {
   background-color: var(--rose-white-color);
-  color: var(--dark-raspberry-color, red);
   padding: 1rem;
   border-radius: var(--border-radius);
 }
-li {
-  color: inherit;
+
+.preparation-time-heading,
+.preparation-time ::marker {
+  color: var(--dark-raspberry-color);
+  font-weight: 600;
 }
-ul.preparation-time > li > span {
-  color: var(--wenge-brown-color, brown);
+
+.preparation-time-items {
+  padding-left: 1.5rem;
 }
-ul.preparation-time * {
-  padding-bottom: 0.5rem; /* TODO: try with gap and DELETE LATER!*/
-}
-ul.preparation-time-heading,
-.preparation-time li span:first-child {
+
+/* todo: try with grid/flex and gap -  DELETE LATER!; */
+
+.preparation-time-heading,
+.preparation-time li :first-child {
   font-weight: 700;
 }
-.preparation-time li {
-  /* margin-inline-start: 0.5rem; */
-  padding-inline-start: 0.5rem;
+
+/* Ingredients */
+.ingredients-heading {
+  margin-block: 1rem;
+}
+
+.ingredients-items {
+  list-style-type: square;
+}
+
+/* Instructions */
+.instructions-heading {
+  margin-block: 1rem;
+}
+
+.instructions-items li :first-child {
+  /* padding-left: 10px; */
+  font-weight: 700;
+}
+
+/* Nutrition */
+.nutrition-heading {
+  margin-block: 1rem;
+}
+
+.nutrition-table {
+  margin-block: 0.5rem;
+}
+
+.nutrition-table tr:last-child td {
+  border-bottom: none;
 }
