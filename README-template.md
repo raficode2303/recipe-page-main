@@ -6,15 +6,12 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -49,9 +46,11 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
+to use LQIP - low-quality image placeholder and preload at `<link>` tag
+
 Do research on various HTML elements and ensure i use the most appropriate element based on the content???!
 
-to use `::marker` css selector. - DONE!
+to use `::marker` css selector.
 
 that `<li>` list-style size can modify by using `::marker{font-size: ...;}`
 
@@ -80,9 +79,9 @@ To see how you can add code snippets, see below:
 ```
 
 ```css
-@media (width > 700px) {
+@media (width > 600px) {
   .app {
-    max-width: clamp(300px, 90%, 1312px);
+    max-width: clamp(300px, 90%, 700px);
   }
 }
 ```
@@ -92,6 +91,13 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 ### Continued development
 
 focusing on in future projects: be more efficient and finish the project more quickly. to be completely comfortable with CSS Selectors also to solve the challenge using GRID/FLEX.
+
+2. how to solve notification like:
+   ARIA roles used must conform to valid values
+   `<header role="header" class="header">`
+
+All page content should be contained by landmarks
+`<img class="image-recipe" src="./assets/images/image-omelette.jpeg" width="1312" height="600" alt="omelette image" loading="lazy">`
 
 ### Useful resources
 

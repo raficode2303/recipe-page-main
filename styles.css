@@ -83,7 +83,7 @@ td {
 }
 
 /* media */
-@media (width < 700px) {
+@media (width < 600px) {
   .main-content {
     padding: 0 2rem;
   }
@@ -102,9 +102,9 @@ td {
     transform: translateY(-50%);
   }
 }
-@media (width > 700px) {
+@media (width > 600px) {
   .app {
-    max-width: clamp(300px, 90%, 1312px);
+    max-width: clamp(300px, 90%, 700px);
     padding: 2rem;
     margin: 2rem auto;
     border-radius: var(--border-radius, 1rem);
